@@ -1,0 +1,13 @@
+package com.aulaweb;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class JpamavensstApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JpamavensstApplication.class, args);
+	}
+
+}

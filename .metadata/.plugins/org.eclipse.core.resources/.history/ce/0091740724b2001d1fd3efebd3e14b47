@@ -1,0 +1,5 @@
+package dominio;
+
+public enum CotaStatus {
+	PENDENTE, EXECUTADO, RESPONDIDA, APROVADA, REPROVADA
+}

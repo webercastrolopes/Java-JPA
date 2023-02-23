@@ -1,0 +1,40 @@
+package aplicacao;
+
+import dominio.Pessoa;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
+
+public class Programa {
+
+	public static void main(String[] args) {
+	
+		Pessoa p1 = new Pessoa(null,"Carlos da Silva","csilva@gmail.com");
+		
+		Pessoa p2 = new Pessoa(null,"Joaquim Torres","jtorres@gmail.com");
+		Pessoa p3 = new Pessoa(null,"Ana Mariar","amaria@gmail.com");
+		
+		
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("exemplo-jpa");
+		EntityManager em = emf.createEntityManager();
+		
+		em.getTransaction().begin();	
+			em.persist(p1);  //é o 'persist' que pega o objeto e salva no banco de dados.
+							 //insert sempre deixar dentro de uma transação
+			em.persist(p2);
+			em.persist(p3);
+		em.getTransaction().commit();
+		
+		System.out.println("Pronto, feito ...no DB ");
+		
+		/*
+		System.out.println(p1);
+		System.out.println(p2);
+		System.out.println(p3);
+		System.out.println(p4);
+		 */
+	}
+
+}
