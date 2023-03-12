@@ -7,4 +7,6 @@
 			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
 		</list>
 	</section>
+	<section name="ImportExportAction">
+	</section>
 </section>
